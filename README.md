@@ -9,16 +9,34 @@ Pour la question 19 :
 Puis ```vim hello.py``` et coller à l'intérieur :
 
 ```
-from flask import Flask, render_template
+from flask import Flask
+from flask import render_template
 
+# creates a Flask application, named app
 app = Flask(__name__)
 
-@app.route('/')
-def hello_world():
-    return '<h1>Hello World</h1>'
+# a route where we will display a welcome message via an HTML template
+@app.route("/")
+def hello():
+    message = "Hello World"
+    return render_template('index.html', message=message)
 
-if __name__ == '__main__':
-    app.run()
+# run the application
+if __name__ == "__main__":
+    app.run(debug=True)
 ```
 
-Et ensuite run la commande 19 (sh 19).
+Puis ```vim templates/index.html``` :
+
+```
+<html>
+        <head>
+                <title>{{message}}</title>
+        </head>
+        <body>
+                <h1>{{message}}</h1>
+        </body>
+</html>
+```
+
+Et ensuite run la commande 19 (sh 19). Résultat accessiblc
