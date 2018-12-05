@@ -1,0 +1,2 @@
+docker service create --name orbital-command --env RABBITMQ_DEFAULT_USER=user --env RABBITMQ_DEFAULT_PASS=user --network overmind rabbitmq
+# RabbitMQ is open source message broker software
