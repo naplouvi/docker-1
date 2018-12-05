@@ -1,0 +1,2 @@
+docker run --detach --name roach-warden --publish 8081:80 --detach --link spawning-pool:spawning-pool --env PMA_HOST=spawning-pool phpmyadmin/phpmyadmin
+# variable d'env pma_host pour spécifier hote mysql, on peut mettre PMA_PORT a la place avec le port mysql
