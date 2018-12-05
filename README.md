@@ -39,4 +39,4 @@ Puis ```vim templates/index.html``` :
 </html>
 ```
 
-Et ensuite run la commande 19 (sh 19). Résultat accessiblc
+Et ensuite run la commande 19 (sh 19). Résultat accessible sur l'ip de Char port 3000.
