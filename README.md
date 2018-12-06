@@ -40,3 +40,23 @@ Puis ```vim templates/index.html``` :
 ```
 
 Et ensuite run la commande 19 (sh 19). Résultat accessible sur l'ip de Char port 3000.
+
+# Switcher VM active :
+
+```
+eval $(docker-machine env [NOM])
+````
+
+# Pour tout supprimer :
+
+```
+docker stop $(docker ps -a -q)
+
+docker rmi $(docker images -q)
+
+docker rm $(docker ps -a -q)
+
+eval $(docker-machine env -u)
+
+docker container ls
+```
