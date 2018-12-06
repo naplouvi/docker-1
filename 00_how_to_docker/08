@@ -1,0 +1,2 @@
+docker run -it --rm alpine
+# -it connecte a la sortie standard du container, --rm remove when it exits
