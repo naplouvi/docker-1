@@ -1,6 +1,6 @@
 FROM alpine
 
-RUN apt update
-RUN apt install vim
+RUN apk update
+RUN apk add vim
 
 CMD vim

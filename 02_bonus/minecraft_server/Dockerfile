@@ -16,7 +16,9 @@ VOLUME /data
 
 EXPOSE 25565
 
-#i Accept Minecraft EULA et start Minecraft server
+# Accept Minecraft EULA et start Minecraft server
 CMD echo eula=true > /data/eula.txt && java -jar /minecraft/minecraft_server.1.13.jar
 
+# Build avec : docker build -t minecraft .
+# Lancer avec : docker run -it --rm -p 25565:25565 minecraft
 # La connexion en jeu se fait sur 127.0.0.1:25565

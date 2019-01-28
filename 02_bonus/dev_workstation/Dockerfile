@@ -6,5 +6,13 @@ RUN apt-get update && apt-get install -y software-properties-common git gcc-snap
 
 RUN adduser --disabled-password --gecos '' nathan
 USER nathan
+
 WORKDIR /home/nathan
+
+ONBUILD COPY . /home/nathan
+ONBUILD RUN gcc -Wall -Werror -Wextra *.c
+
 RUN echo "set nu\nsyntax on\nset mouse=a\n" > .vimrc
+
+# build avec : docekr build -t naplouvi/workdev .
+
